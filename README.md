@@ -25,10 +25,6 @@ Se muestra lo siguiente:
 Sustituir xxxxxx por un apikey real.
 
 
-
-
-
-
 Inslalaciones necesarias:
 
 Node.js
