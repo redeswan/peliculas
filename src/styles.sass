@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+
+.container
+  padding-top: 3em
+
+.animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.fadeIn
+  animation-name: fadeIn
+
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+
+.favorite-wrapper
+  margin: 0,2em
+  cursor: pointer
+  font-size: 2em
+  float: left
+  margin: 0.2em
+
+.favorite
+  color: #ffcc00
+
+.no-favorite
+  color: #938b6c
+
+.ver-pelicula
+  font-size: 2em
+  float: right
+  margin: 0.2em
+  cursor: pointer
+
+.no-image-wrapper
+  position: relative
+  height: 10em
+  background-color: #DBDBDB
+  margin-top: 4em
+  cursor: pointer
+
+.no-image
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 5em

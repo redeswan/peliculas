@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="card-columns" *ngIf="peliculasService.search">
+  <div class="card fadeIn animated" *ngFor="let item of peliculasService.search.Search">
+      <div class="favorite-wrapper"
+          [ngClass]="{'favorite'         : peliculasService.isFavorite(item.imdbID),
+                      'no-favorite'      : !peliculasService.isFavorite(item.imdbID)}"
+          (click)="peliculasService.toggleFavorite(item.imdbID)">
+              <i class="far fa-star" *ngIf="!peliculasService.isFavorite(item.imdbID)"></i>
+              <i class="fas fa-star" *ngIf="peliculasService.isFavorite(item.imdbID)"></i>
+      </div>
+      <div class="ver-pelicula" (click)="verDetalles(item.imdbID)">
+        <i class="fas fa-arrow-circle-right"></i>
+      </div>
+      <img *ngIf="item.Poster!='N/A'" class="card-img-top" src="{{item.Poster}}" (click)="verDetalles(item.imdbID)">
+      <div class="no-image-wrapper" *ngIf="item.Poster=='N/A'" (click)="verDetalles(item.imdbID)">
+        <i class=" no-image far fa-image"></i>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{item.Title}}</h5>
+        <p class="card-text">{{item.Year}}</p>
+      </div>
+  </div>
+</div>

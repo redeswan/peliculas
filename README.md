@@ -1,27 +1,65 @@
 # GfiApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+Proyecto de prueba desarrollado con [Angular CLI](https://github.com/angular/angular-cli) versión 7.0.5.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Instrucciones para probarlo en entorno linux:
 
-## Code scaffolding
+Clonar el proyecto en una carpeta local.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Agregar clave de acceso al servicio de películas:
+Abrir el fichero de configuración:
+src/assets/jsondata/config.json
 
-## Build
+Se muestra lo siguiente:
+{
+  "peliculas":{
+    "url_base"    :"http://www.omdbapi.com/?apikey=xxxxxx",
+    "title_param" :"t",
+    "id_param"    :"i",
+    "search_param":"s",
+    "page_param"  :"p"
+  }
+}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Sustituir xxxxxx por un apikey real.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Inslalaciones necesarias:
+
+Node.js
+Descargarlo desde
+https://nodejs.org/es/
+Para instalar la versión más actualizada
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install nodejs
+
+Typescript
+sudo npm install -g typescript
+
+Angular CLI
+sudo npm install -g @angular/cli
+
+Si hay una versión anterior debe desinstalarse primero:
+sudo npm uninstall -g @angular/cli
+sudo npm cache clean
+sudo npm install -g @angular/cli
+
+Bootstrap (emplea proper y jquery)
+Agregar Popper (Empleado por Bootstrap)
+npm install popper.js --save
+Agregar Jquery (Empleado por Bootstrap)
+npm install jquery
+Agregar Bootstrap
+npm install bootstrap
+
+FontAwesome
+npm install font-awesome --save
+
+
+Para probar en modo desarrollo, ejecutar:
+ng serve -o

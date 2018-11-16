@@ -1,0 +1,9 @@
+{
+  "peliculas":{
+    "url_base"    :"http://www.omdbapi.com/?apikey=xxxxxx",
+    "title_param" :"t",
+    "id_param"    :"i",
+    "search_param":"s",
+    "page_param"  :"p"
+  }
+}

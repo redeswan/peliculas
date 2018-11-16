@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="volver" (click)="volver()">
+    <h3><i class="fas fa-chevron-circle-left"></i></h3>
+  </div>
+</div>
+<div class="row fadeIn animated" *ngIf="peliculasService.pelicula">
+  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+    <img *ngIf="peliculasService.pelicula.Poster != 'N/A'" src="{{peliculasService.pelicula.Poster}}" class="img-fluid">
+    <div class="no-image-wrapper" *ngIf="peliculasService.pelicula.Poster == 'N/A'">    
+      <i class=" no-image far fa-image"></i>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+    <h3>{{peliculasService.pelicula.Title}}</h3>
+    <h4>{{peliculasService.pelicula.Year}}</h4>
+    <p>{{peliculasService.pelicula.Plot}}</p>
+  </div>
+</div>
